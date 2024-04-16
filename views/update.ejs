@@ -1,0 +1,54 @@
+<%- include("partials/header.ejs") %>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('https://www.shutterstock.com/image-photo/bloggingblog-concepts-ideas-white-worktable-600nw-1029506242.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Edit Blog</h1>
+                            <span class="subheading">Edit your own blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Fill out the form below to edit blog on the home page.</p>
+                        <div class="my-5">
+                           
+                            <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="/edit/<%= id %>" method="POST">
+                               
+                                <div class="form-floating">
+                                    <input class="form-control" id="title" name="title" type="text" placeholder="Enter New Title..." required />
+                                    <label for="title">Blog title</label>
+                                    <div class="invalid-feedback">A title is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="subtitle" name="subtitle" type="text" placeholder="Enter New subtitle..." required />
+                                    <label for="subtitle">Blog subtitle</label>
+                                    <div class="invalid-feedback">A subtitle is required.</div>
+                                </div>
+                             
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="data" name="data" placeholder="Enter New your data here..." style="height: 12rem" required></textarea>
+                                    <label for="data">Data</label>
+                                    <div class="invalid-feedback">Data is required.</div>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary text-uppercase"  id="submitButton" type="submit">SUBMIT</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+       
+        <%- include("partials/footer.ejs") %>
+
+
+        
